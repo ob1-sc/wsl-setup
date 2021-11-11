@@ -11,6 +11,7 @@
         update_cache: true
 
   roles:
+    - zsh-user
     - powershell
     - vim
     - tmux
@@ -22,7 +23,6 @@
     - docker-user
     - vim-user
     - tmux-user
-    - zsh-user
 
   post_tasks:
     - name: cleanup apt packages
