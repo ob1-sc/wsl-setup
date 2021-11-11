@@ -2,7 +2,7 @@
 - name: setup wsl
   hosts: all
   vars_files:
-    - vars.yml
+    - vars.yaml
   become: true
 
   pre_tasks:
@@ -18,7 +18,10 @@
     - docker-ce
     - python
     - misc
-    - tanzu
+    - lastpass-user
+    - docker-user
+    - vim-user
+    - tmux-user
 
   post_tasks:
     - name: cleanup apt packages
