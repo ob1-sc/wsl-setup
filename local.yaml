@@ -22,6 +22,7 @@
     - docker-user
     - vim-user
     - tmux-user
+    - zsh-user
 
   post_tasks:
     - name: cleanup apt packages
