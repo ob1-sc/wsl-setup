@@ -2,9 +2,10 @@
 
 echo "Installing ansible ..."
 sudo apt update
-sudo apt install software-properties-common python3-jmespath
+sudo apt install -y software-properties-common python3-jmespath
 sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
+sudo apt update
+sudo apt install -y ansible
 
 echo "Preparing setup playbook ..."
 git clone https://github.com/ob1-sc/wsl-setup --recurse-submodules
