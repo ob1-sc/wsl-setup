@@ -1,0 +1,27 @@
+---
+- name: setup wsl
+  hosts: all
+  vars_files:
+    - vars.yml
+  become: true
+
+  pre_tasks:
+    - name: upgrade apt repositories
+      apt:
+        update_cache: true
+
+  roles:
+    - powershell
+    - vim
+    - tmux
+    - lastpass
+    - docker-ce
+    - python
+    - misc
+    - tanzu
+
+  post_tasks:
+    - name: cleanup apt packages
+      apt:
+        autoclean: true
+        autoremove: true
