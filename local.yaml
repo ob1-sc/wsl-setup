@@ -11,6 +11,7 @@
         update_cache: true
 
   roles:
+    - asdf
     - zsh-user
     - powershell
     - vim
