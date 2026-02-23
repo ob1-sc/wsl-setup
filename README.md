@@ -1,10 +1,28 @@
-# wsl-setup
-My Personal WSL Setup
+# tanzu-wsl-setup
+Basic Windows Subsystem for Linux 2 setup for Tanzu platform engineers and operators.
 
-## How to install
-Install nerd font: https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Medium/complete/Fira%20Code%20Medium%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf
+## Install WSL2
 
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ob1-sc/wsl-setup/main/setup.sh)"
+The quickest way to install WSL2 is through an elevated terminal (PowerShell or Command Prompt).
+
+Right-click the Start button and select Terminal (Admin) or PowerShell (Admin).
+
+Type the following command:
+
+```PowerShell
+wsl --install Ubuntu-24.04
+```
+
+By default, `--install` grabs Ubuntu (latest). If you want a different flavor of Linux, you can see what is available first:
+
+List available distros: `wsl --list --online`
+
+Install a specific one: `wsl --install -d <DistroName>` (e.g., `wsl --install -d Debian`)
+
+Restart your computer. This is a non-negotiable step to initialize the virtual machine platform IF the virtual machine platform has not yet been initialized.
 
 ## Resource management
 WSL will consume unlimited resources in windows unless instructed otherwise. Copy `.wsl-setup` into your `%userprofile%` directory on windows and tweak the settings as approriate.
+
+## Ansible setup management
+
